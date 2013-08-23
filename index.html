@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="icon" type="image/x-icon" href="images/gweled-icon.png" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="gweled, bejeweld, diamond mine, game, free, linux, launchpad, gems, graphics, ubuntu" />
+<meta name="description" content="Gweled is a GNOME version of a popular PalmOS/Windows/Java game called Bejeweled or Diamond Mine." />
+<title>Gweled</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/slideshow.css" />
+<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/slideshow.js"></script>
+<script type="text/javascript" src="http://dnax.it/json-proxy.php"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	//Execute the slideShow, set 4 seconds for each images
+	slideShow(5000);
+	
+	// set the correct last release version and tarball
+	$('#download-box span.download-first').html('Download ' + gweled_last_release['friendly_name']);	
+	$('#download-box #download-main').attr('href', gweled_last_release['file_url']);
+	
+});
+
+</script>
+
+</head>
+<body>
+<div id="main">
+  <div id="header">
+    <div id="logo">
+      <img src="images/gweled-logo.png" alt="Logo" />
+    </div>
+    <div id="main-title">
+      <h1>Gweled</h1>
+      <span>A puzzle game with gems</span>
+    </div>
+    <ul>
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="download.html">Download</a></li>
+      <!--<li><a href="home">News</a></li>-->
+      <li><a href="https://launchpad.net/gweled">Development</a></li>
+    </ul>
+  </div>
+  <div id="ads">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7728197553266528";
+/* gweled medio */
+google_ad_slot = "4954763116";
+google_ad_width = 234;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+  </div>
+  <div id="top">
+    <ul class="slideshow">
+          <li><img src="images/slide1.jpg" width="920" height="250" title="Modern Graphics" alt="With good graphics and smooth animations, Gweled can compete with the paid versions." /></li>
+          <li><img src="images/slide2.jpg" width="920" height="250" title="Good Gameplay" alt="With features as saving your game and 'drag and drop' support, the gameplay is great!" /></li>
+          <li><img src="images/slide3.jpg" width="920" height="250" title="Regular Updates" alt="Compete to other games, Gweled keeps getting better, with updates and new features with every release." /></li>
+    </ul>
+  </div>
+  <div id="contents">
+    <div id="download-box">
+      <a href="http://launchpad.net/gweled/trunk/0.9.1/+download/gweled-0.9.1.tar.gz" id="download-main" title="Download Gweled">
+        <span class="download-first">Download Gweled 0.9.1</span>
+        <br/>
+        <span class="download-second">394 kb .tar.gz archive</span>
+      </a>
+      <a href="https://launchpad.net/~dnax88/+archive/gweled" class="download-other">PPA</a> · <a href="https://launchpad.net/gweled/+download" class="download-other">Other versions</a>
+    </div>
+    <div id="introduction">
+      <h2>The game</h2>
+      <p>Gweled is a free version of a popular game called <em>Bejeweled</em> or
+        <em>Diamond Mine</em> for GNU/Linux. The aim of the game is to make
+        alignment of 3 or more gems, both vertically or horizontally by swapping
+        adjacent gems. The game ends when there are no possible moves left.</p>
+        <p>You can also choose for two other game modes, timed or endless.
+        In the <strong>Timed mode</strong> your limited on time, when your time
+        is up, the game end. The <strong>Endless mode</strong> never ends, but
+        your score will not be registred (also called the "Relax" or "Zen" mode).
+      </p>
+    </div>
+    <div id="screenshots">
+      <script type="text/javascript" src="js/jquery.lightbox-0.5.min.js"></script>
+      <script type="text/javascript">
+        $(function() {
+	        $('#gallery a').lightBox();
+        });
+      </script>
+      <h2>Screenshots</h2>
+      <div id="gallery">
+        <a href="images/screen1.png"><img src="images/screen1_small.png" alt="" width="100px" /></a>
+        <a href="images/screen2.png"><img src="images/screen2_small.jpg" alt="" width="100px" /></a>
+        <a href="images/screen3.png"><img src="images/screen3_small.jpg" alt="" width="100px" /></a>
+      </div>
+    </div>
+    <div id="features">
+      <h2>Features</h2>
+      <ul>
+        <li>Good gameplay</li>
+        <li>Good graphics</li>
+        <li>Smooth animations</li>
+        <li>Save and resume game support</li>
+        <li>Lightweight graphics</li>
+        <li>Built over GTK+ graphics library</li>
+        <li>Completely free software (GPLv2+)</li>
+      </ul>
+    </div>
+    <div id="announcements">
+      <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAPYtAAS5dW8L3KWJ_0rfCghRKmvkPh0qeU9SPVGznO2IF5JBJ0xQhYT_Oa1WZIpLwYv2vQA-1NxwuvQ"></script>
+      <script type="text/javascript" src="js/jquery.gfeed.js"></script>
+      <script type="text/javascript">
+       $(function () {
+          $("#feed").gFeed ({
+              url: "http://feeds.launchpad.net/gweled/announcements.atom",
+              max: 6
+          });
+       });
+      </script>
+      <h2>Latest news</h2>
+      <div id="feed"></div>
+      <div class="rss">
+        <a href="http://feeds.launchpad.net/gweled/announcements.atom" title="Atom/RSS feed"><img src="images/rss.png" alt="Feed"></a>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <p>© 2011 <a href="http://www.dnax.it/">Daniele Napolitano</a>, <a href="http://www.idi.jouwweb.nl/">Ivo Reumkens</a> and the community.</p>
+  </div>
+  <!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.dnax.it/piwik/" : "http://www.dnax.it/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 3);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.dnax.it/piwik/piwik.php?idsite=3" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+</div>
+</body>
+</html>

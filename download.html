@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="icon" type="image/x-icon" href="images/gweled-icon.png" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="gweled, bejeweld, diamond mine, game, free, linux, launchpad, gems, graphics, ubuntu" />
+<meta name="description" content="Gweled is a GNOME version of a popular PalmOS/Windows/Java game called Bejeweled or Diamond Mine." />
+<title>Gweled - Download</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/slideshow.css" />
+<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/slideshow.js"></script>
+<script type="text/javascript" src="http://dnax.it/json-proxy.php"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	//Execute the slideShow, set 4 seconds for each images
+	slideShow(5000);
+	
+	// set the correct last release version and tarball
+	$('#download-file').html('gweled-' + gweled_last_release['version'] + '.tar.gz');	
+	$('#download-link').attr('href', gweled_last_release['file_url']);
+	
+});
+
+</script>
+
+</head>
+<body>
+<div id="main">
+  <div id="header">
+    <div id="logo">
+      <img src="images/gweled-logo.png" alt="Logo" />
+    </div>
+    <div id="main-title">
+      <h1>Gweled</h1>
+      <span>A puzzle game with gems</span>
+    </div>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="download.html" class="active">Download</a></li>
+      <!--<li><a href="home">News</a></li>-->
+      <li><a href="https://launchpad.net/gweled">Development</a></li>
+    </ul>
+  </div>
+  <div id="ads">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7728197553266528";
+/* gweled medio */
+google_ad_slot = "4954763116";
+google_ad_width = 234;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+  </div>
+  <div id="top">
+    <ul class="slideshow">
+          <li><img src="images/slide1.jpg" width="920" height="250" title="Modern Graphics" alt="With good graphics and smooth animations, Gweled can compete with the paid versions." /></li>
+          <li><img src="images/slide2.jpg" width="920" height="250" title="Good Gameplay" alt="With features as saving your game and 'drag and drop' support, the gameplay is great!" /></li>
+          <li><img src="images/slide3.jpg" width="920" height="250" title="Regular Updates" alt="Compete to other games, Gweled keeps getting better, with updates and new features with every release." /></li>
+    </ul>
+  </div>
+  <div id="contents">
+      <div class="download-section" style="width:290px">
+          <h2>Ubuntu</h2>
+          <img src="images/download-ubuntu.png" alt=""/>
+          <p>On Ubuntu Gweled can be installed using the Ubuntu Software Center.</p>
+          <p><a href="apt:gweled">1-Click install</a></p>
+          <p>For the latest release there is an Ubuntu PPA for Gweled, currently with binaries for 10.10 "Maverick", 11.04 "Natty" and 11.10 "Oneric".
+          </p>
+          <pre>
+<code>sudo add-apt-repository ppa:dnax88/gweled
+sudo apt-get update
+sudo apt-get install gweled</code></pre>
+      </div>
+      <div class="download-section">
+          <h2>Fedora</h2>
+          <img src="images/download-fedora.png" alt=""/>
+          <p>To install Gweled on Fedora you can use yum:</p>
+          <pre>
+<code>yum install gweled</code></pre>
+      </div>
+      <div class="download-section">
+          <h2>openSUSE</h2>
+          <img src="images/download-suse.png" alt=""/>
+          <p>Gweled is already included on recent openSUSE releases.</p>
+          <p><a href="http://software.opensuse.org/ymp/Education/openSUSE_11.4/gweled.ymp?base=openSUSE%3A11.4&query=gweled">1-Click install</a> (for openSUSE 11.4)
+      </div>
+      <div class="download-section">
+          <h2>Debian</h2>
+          <img src="images/download-debian.png" alt=""/>
+          <p>Debian users can install Gweled with apt:</p>
+          <pre>
+<code>aptitude install gweled</code></pre>
+      </div>
+      <div class="download-section">
+          <h2>Arch Linux</h2>
+          <img src="images/download-archlinux.png" alt=""/>
+          <p>If you using Arch Linux Gweled is on <code>extra</code> repository:</p>
+          <pre>
+<code>pacman -S gweled</code></pre>
+      </div>
+      <div class="download-section" style="clear:both;width:500px">
+          <h2>From source</h2>
+          <img src="images/download-linux.png" alt=""/>
+          <p><strong>Latest release tarball:</strong> <a href="http://launchpad.net/gweled/trunk/0.9.1/+download/gweled-0.9.1.tar.gz" id="download-link">
+<code><span id="download-file">gweled-0.9.1.tar.gz</span></code></a></p>
+          <p>If you'd like to see exactly what's going on, you can clone Gweled from bzr:</p>
+          <pre>
+<code>bzr branch lp:gweled</code></pre>
+      </div>  
+  </div>
+  <div id="footer">
+    <p>© 2011 <a href="http://www.dnax.it/">Daniele Napolitano</a>, <a href="http://www.idi.jouwweb.nl/">Ivo Reumkens</a> and the community.</p>
+  </div>
+  <!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.dnax.it/piwik/" : "http://www.dnax.it/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 3);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://www.dnax.it/piwik/piwik.php?idsite=3" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+</div>
+</body>
+</html>

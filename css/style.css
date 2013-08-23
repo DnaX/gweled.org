@@ -1,0 +1,254 @@
+body {
+    background: url("../images/main_bg.gif");
+    font-family: Ubuntu, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    color: #DDD;
+}
+
+a:link, a:visited {
+    color: #EEE;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+#main {
+    margin: 0 auto;
+    width: 900px;
+    position:relative;
+}
+
+#ads {
+    position:absolute;
+    top: 18px;
+    left: 383px;
+}
+
+#ads.content {
+    text-align:left;
+}
+
+#header {
+    background: url("../images/header_bg.jpg") center no-repeat;
+    margin: 0 20px;
+    text-shadow: 0 1px 0 #000;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    height: 64px;
+}
+#logo {
+    float: left;
+    margin-right: 15px;
+}
+#main-title {
+    float:left;
+}
+h1 {
+    color: #FFF;
+    padding: 0px;
+    margin: 0px;
+    font-size: 32px;
+}
+/* subtitle */
+#main-title span {
+    color: #AAA;
+    font-size:15px;
+}
+
+#header ul {
+    float: right;
+    margin: 46px 0 0;
+    font-size: 14px;
+}
+
+#header li {
+    display: inline;
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+
+#header li a {
+    color: #BBB;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#header li a:hover,
+#header li a.active {
+    color: #FFF;
+    padding-bottom: 1px;
+    border-bottom: 2px solid #298DAF;
+}
+
+#top {
+    clear: both;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #000;
+    border: 1px solid #222;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    color: #FFF;
+}
+
+#contents {
+    font-size: 13px;
+    margin: 0 10px;
+}
+
+#contents h2 {
+    color: #AAA;
+    font-size: 16px;
+    margin-top: 0px;
+    text-shadow: 0 1px 0 #000;
+}
+
+#contents p, #contents ul {
+    line-height: 1.4em;
+}
+
+#introduction {
+    margin-bottom: 20px;
+    padding-right: 220px;
+}
+
+#download-box {
+    float: right;
+    width: 210px;
+    margin-top: 36px;
+    text-align:center;
+}
+
+#download-main {
+    background: url("../images/download-button-bg.png") no-repeat 0 -60px;
+    height: 40px;
+    background-color: #FF8;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    color: #4D4400; /*#807200;*/
+    text-shadow: 0 1px 0 #FFF280;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 2px;
+    text-align:left;
+}
+
+#download-main:hover {
+    background: url("../images/download-button-bg.png") no-repeat 0 0;
+}
+
+#download-main .download-first {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#download-main .download-second {
+    font-size: 13px;
+}
+
+#download-box .download-other {
+    font-size: 11px;
+    color: #777;
+}
+
+#contents #screenshots {
+    width: 340px;
+    float:left;
+}
+
+#gallery {
+    height: 140px;
+}
+
+#gallery img {
+    border: none;
+    margin: 3px;
+}
+
+#contents #features {
+    width: 250px;
+    float:left;
+    margin-left: 20px;
+}
+
+#features ul {
+    padding-left: 20px;
+}
+
+#announcements {
+    width: 250px;
+    float:left;
+    font-size: 0.9em;
+    margin-left: 20px;
+    position: relative;
+}
+
+#announcements .rss {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#feed .gf-result {
+    background: url("../images/feed_item.png") no-repeat;
+    padding-left: 19px;
+    position: relative;
+}
+
+#feed .gfc-title, #feed .gf-author, #feed .gf-snippet, #feed .gf-spacer, #feed .gfc-resultsHeader {
+    display: none;
+}
+
+.gf-result .gf-author, .gf-result .gf-spacer, .gf-result .gf-relativePublishedDate {
+    color: #6F6F6F;
+    display: inline;
+}
+
+#feed .gf-relativePublishedDate {
+    color: #999999;
+    font-size: 0.85em;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.download-section {
+    width: 250px;
+    float:left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 11px;
+}
+
+.download-section p {
+    text-align: left;
+}
+
+
+.download-section img {
+    float: left;
+    margin-right: 8px;
+}
+
+#footer {
+    clear:both;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding: 5px 0px;
+    color: #666;
+    font-size: 11px;
+}
+
+#footer a {
+    color: #888;
+}
+
