@@ -107,7 +107,7 @@ $(document).ready(function() {
     </div>
   </div>
   <div id="footer">
-    <p>© 2011 <a href="http://www.dnax.it/">Daniele Napolitano</a>, <a href="http://www.idi.jouwweb.nl/">Ivo Reumkens</a> and the community.</p>
+    <p>© 2011 <a href="https://www.dnax.it/">Daniele Napolitano</a>, Ivo Reumkens and the community.</p>
   </div>
 </div>
 
@@ -115,7 +115,7 @@ $(document).ready(function() {
  $(function () {
 
   $.ajax({
-    url: 'http://rss2json.com/api.json?rss_url=' + encodeURIComponent('http://feeds.launchpad.net/gweled/announcements.atom'),
+    url: 'https://rss2json.com/api.json?rss_url=' + encodeURIComponent('http://feeds.launchpad.net/gweled/announcements.atom'),
     method: 'GET',
     dataType: 'json',
   }).done(function (response) {
