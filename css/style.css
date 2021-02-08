@@ -3,7 +3,6 @@ body {
     font-family: Ubuntu, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: justify;
     color: #DDD;
 }
 
@@ -127,9 +126,9 @@ h1 {
 }
 
 #download-main {
-    background: url("../images/download-button-bg.png") no-repeat 0 -60px;
-    height: 40px;
     background-color: #FF8;
+    background: linear-gradient(0deg, #c5a101 0%, #fce94f 100%);
+    height: 40px;
     -moz-border-radius: 15px;
     -webkit-border-radius: 15px;
     border-radius: 15px;
@@ -142,8 +141,8 @@ h1 {
     text-align:left;
 }
 
-#download-main:hover {
-    background: url("../images/download-button-bg.png") no-repeat 0 0;
+#download-main:hover,#download-main:focus {
+    background: linear-gradient(0deg, #edd400 0%, #fce94f 100%);
 }
 
 #download-main .download-first {
@@ -202,6 +201,7 @@ h1 {
     background: url("../images/feed_item.png") no-repeat;
     padding-left: 19px;
     position: relative;
+    margin-bottom: 1px;
 }
 
 .feed-item .feed-date {
@@ -248,3 +248,83 @@ h1 {
     color: #888;
 }
 
+@media (max-width: 600px) {
+
+    #main {
+        width: auto;
+    }
+
+    #main-title span {
+        display: block;
+        margin-top: .5em;
+    }
+
+    #top {
+        display: none;
+    }
+
+    #logo, #main-title {
+        float: none;
+        margin: 0;
+    }
+
+    #header {
+        height: auto;
+        text-align: center;
+        background-size: contain;
+        background-position: top center;
+    }
+
+    #header ul {
+        float: none;
+        margin: 2em auto 1em;
+        padding: 0;
+    }
+
+    #header li {
+        float: none;
+     }
+
+    #header li:first-child {
+        padding-left: 0;
+    }
+
+    #contents {
+        font-size: 15px;
+    }
+
+    #contents h2 {
+        font-size: 20px;
+    }
+
+    #contents > * {
+        float: none !important;
+        margin: 1em 0 !important;
+        width: auto;
+    }
+
+    #download-box {
+        margin: 0 auto;
+        padding: 0 10vw;
+    }
+
+    #download-main {
+        text-align: center;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    #introduction {
+        padding: 0;
+    }
+
+    #contents .download-section {
+        width: auto !important;
+        margin: 2em 0 !important;
+        font-size: 15px;
+    }
+
+    #footer {
+        text-align: center;
+    }
+}
