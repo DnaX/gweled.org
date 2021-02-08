@@ -198,17 +198,13 @@ h1 {
     top: 0;
 }
 
-#feed .gf-result {
+#feed .feed-item {
     background: url("../images/feed_item.png") no-repeat;
     padding-left: 19px;
     position: relative;
 }
 
-#feed .gfc-title, #feed .gf-author, #feed .gf-snippet, #feed .gf-spacer, #feed .gfc-resultsHeader {
-    display: none;
-}
-
-.gf-result .gf-author, .gf-result .gf-spacer, .gf-result .gf-relativePublishedDate {
+.feed-item .feed-date {
     color: #6F6F6F;
     display: inline;
 }

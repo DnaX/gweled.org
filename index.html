@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 <link rel="icon" type="image/x-icon" href="images/gweled-icon.png" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="css/slideshow.css" />
 <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
 <script type="text/javascript" src="js/slideshow.js"></script>
-<script type="text/javascript" src="http://dnax.it/json-proxy.php"></script>
+<script type="text/javascript" src="https://www.dnax.it/json-proxy.php"></script>
 <script type="text/javascript">
 
 $(document).ready(function() {
@@ -44,19 +44,6 @@ $(document).ready(function() {
       <!--<li><a href="home">News</a></li>-->
       <li><a href="https://launchpad.net/gweled">Development</a></li>
     </ul>
-  </div>
-  <div id="ads">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-7728197553266528";
-/* gweled medio */
-google_ad_slot = "4954763116";
-google_ad_width = 234;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
   </div>
   <div id="top">
     <ul class="slideshow">
@@ -112,16 +99,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       </ul>
     </div>
     <div id="announcements">
-      <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAPYtAAS5dW8L3KWJ_0rfCghRKmvkPh0qeU9SPVGznO2IF5JBJ0xQhYT_Oa1WZIpLwYv2vQA-1NxwuvQ"></script>
-      <script type="text/javascript" src="js/jquery.gfeed.js"></script>
-      <script type="text/javascript">
-       $(function () {
-          $("#feed").gFeed ({
-              url: "http://feeds.launchpad.net/gweled/announcements.atom",
-              max: 6
-          });
-       });
-      </script>
       <h2>Latest news</h2>
       <div id="feed"></div>
       <div class="rss">
@@ -132,21 +109,54 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <div id="footer">
     <p>© 2011 <a href="http://www.dnax.it/">Daniele Napolitano</a>, <a href="http://www.idi.jouwweb.nl/">Ivo Reumkens</a> and the community.</p>
   </div>
- <!-- Piwik -->
+</div>
+
 <script type="text/javascript">
-  var _paq = _paq || [];
+ $(function () {
+
+  $.ajax({
+    url: 'http://rss2json.com/api.json?rss_url=' + encodeURIComponent('http://feeds.launchpad.net/gweled/announcements.atom'),
+    method: 'GET',
+    dataType: 'json',
+  }).done(function (response) {
+      if(response.status != 'ok'){ throw response.message; }
+
+      var $container = $("#feed");
+      for (var i = 0; i < Math.min(response.items.length, 5); i++) {
+        var entry = response.items[i];
+        var $div = $('<div>').addClass('feed-item');
+
+        var $link = $("<a />", {
+          href : entry.link,
+          text : entry.title
+        });
+
+        $div.append($('<div>').addClass('feed-title').append($link));
+        $div.append($('<div>').addClass('feed-date').text(new Date(entry.pubDate).toLocaleDateString()));
+
+        $container.append($div);
+      }
+  });
+
+ });
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
     var u="//piwik.dnax.it/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 3]);
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '3']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="//piwik.dnax.it/piwik.php?idsite=3" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->
-</div>
+<noscript><p><img src="//piwik.dnax.it/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+
 </body>
 </html>
