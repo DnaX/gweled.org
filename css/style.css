@@ -1,6 +1,6 @@
 body {
     background: #000 url("../images/main_bg.gif");
-    font-family: Ubuntu, sans-serif;
+    font-family: Ubuntu, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
     color: #DDD;
@@ -61,7 +61,7 @@ h1 {
 #header ul {
     float: right;
     margin: 46px 0 0;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 #header li {
@@ -88,7 +88,7 @@ h1 {
 #top {
     clear: both;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     background-color: #000;
     border: 1px solid #222;
     -moz-border-radius: 20px;
@@ -98,13 +98,13 @@ h1 {
 }
 
 #contents {
-    font-size: 13px;
+    font-size: 14px;
     margin: 0 10px;
 }
 
 #contents h2 {
     color: #AAA;
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 0px;
     text-shadow: 0 1px 0 #000;
 }
@@ -120,18 +120,21 @@ h1 {
 
 #download-box {
     float: right;
-    width: 210px;
     margin-top: 36px;
     text-align:center;
+}
+
+#download-box > * {
+    display: inline-block;
 }
 
 #download-main {
     background-color: #FF8;
     background: linear-gradient(0deg, #c5a101 0%, #fce94f 100%);
     height: 40px;
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
-    border-radius: 15px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
     color: #4D4400; /*#807200;*/
     text-shadow: 0 1px 0 #FFF280;
     padding: 10px;
@@ -155,8 +158,13 @@ h1 {
 }
 
 #download-box .download-other {
-    font-size: 11px;
-    color: #777;
+    padding: 5px 0;
+}
+
+#download-box .download-other > *{
+    font-size: 14px;
+    color: #888;
+    vertical-align: middle;
 }
 
 #contents #screenshots {
@@ -198,50 +206,57 @@ h1 {
 }
 
 #feed .feed-item {
-    background: url("../images/feed_item.png") no-repeat;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background: url("../images/feed_item.png") left center no-repeat;
     padding-left: 19px;
-    position: relative;
-    margin-bottom: 1px;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+
+#feed .feed-item:last-child {
+     margin-bottom: 0;
 }
 
 .feed-item .feed-date {
-    color: #6F6F6F;
-    display: inline;
-}
-
-#feed .gf-relativePublishedDate {
     color: #999999;
     font-size: 0.85em;
-    position: absolute;
-    right: 0;
-    top: 0;
+    align-self: center;
 }
 
-.download-section {
-    width: 250px;
-    float:left;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    font-size: 11px;
+.downloads-section {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-column-gap: 16px;
+    grid-row-gap: 15px;
 }
 
-.download-section p {
+.download-item {
+    font-size: 14px;
+}
+
+.download-item p {
     text-align: left;
 }
 
-
-.download-section img {
+.download-item img {
     float: left;
     margin-right: 8px;
+}
+
+.download-item pre {
+    font-size: 12px;
 }
 
 #footer {
     clear:both;
     margin-top: 20px;
-    border-top: 1px solid #444;
+    border-top: 1px solid #666;
     padding: 5px 0px;
     color: #666;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 #footer a {
@@ -318,10 +333,12 @@ h1 {
         padding: 0;
     }
 
-    #contents .download-section {
-        width: auto !important;
-        margin: 2em 0 !important;
-        font-size: 15px;
+    .downloads-section {
+        display:block;
+    }
+
+    .download-item {
+        margin-bottom: 2em;
     }
 
     #footer {

@@ -53,54 +53,56 @@ $(document).ready(function() {
     </ul>
   </div>
   <div id="contents">
-      <div class="download-section" style="width:290px">
+    <div class="downloads-section">
+      <div class="download-item" style="grid-row-start: 1;grid-row-end: span 2;">
           <h2>Ubuntu</h2>
-          <img src="images/download-ubuntu.png" alt=""/>
+          <img src="images/download-ubuntu.png" alt="Ubuntu"/>
           <p>On Ubuntu Gweled can be installed using the Ubuntu Software Center.</p>
           <p><a href="apt:gweled">1-Click install</a></p>
-          <p>For the latest release there is an Ubuntu PPA for Gweled, currently with binaries for 10.10 "Maverick", 11.04 "Natty" and 11.10 "Oneric".
+          <p>For the latest release there is the Ubuntu PPA for Gweled, currently with binaries for 18.04 "Bionic" and 20.04 "Focal".
           </p>
           <pre>
 <code>sudo add-apt-repository ppa:dnax88/gweled
 sudo apt-get update
 sudo apt-get install gweled</code></pre>
       </div>
-      <div class="download-section">
+      <div class="download-item">
           <h2>Fedora</h2>
-          <img src="images/download-fedora.png" alt=""/>
+          <img src="images/download-fedora.png" alt="Fedora"/>
           <p>To install Gweled on Fedora you can use yum:</p>
           <pre>
 <code>yum install gweled</code></pre>
       </div>
-      <div class="download-section">
+      <div class="download-item">
           <h2>openSUSE</h2>
-          <img src="images/download-suse.png" alt=""/>
+          <img src="images/download-suse.png" alt="SUSE"/>
           <p>Gweled is already included on recent openSUSE releases.</p>
           <p><a href="http://software.opensuse.org/ymp/Education/openSUSE_11.4/gweled.ymp?base=openSUSE%3A11.4&query=gweled">1-Click install</a> (for openSUSE 11.4)
       </div>
-      <div class="download-section">
+      <div class="download-item">
           <h2>Debian</h2>
-          <img src="images/download-debian.png" alt=""/>
+          <img src="images/download-debian.png" alt="Debian"/>
           <p>Debian users can install Gweled with apt:</p>
           <pre>
 <code>aptitude install gweled</code></pre>
       </div>
-      <div class="download-section">
+      <div class="download-item">
           <h2>Arch Linux</h2>
-          <img src="images/download-archlinux.png" alt=""/>
+          <img src="images/download-archlinux.png" alt="Arch Linux"/>
           <p>If you using Arch Linux Gweled is on <code>extra</code> repository:</p>
           <pre>
 <code>pacman -S gweled</code></pre>
       </div>
-      <div class="download-section" style="clear:both;width:500px">
+      <div class="download-item" style="grid-column-start: 1;grid-column-end: span 3;">
           <h2>From source</h2>
           <img src="images/download-linux.png" alt=""/>
           <p><strong>Latest release tarball:</strong> <a href="http://launchpad.net/gweled/trunk/0.9.1/+download/gweled-0.9.1.tar.gz" id="download-link">
 <code><span id="download-file">gweled-0.9.1.tar.gz</span></code></a></p>
-          <p>If you'd like to see exactly what's going on, you can clone Gweled from bzr:</p>
+          <p>If you'd like to see exactly what's going on, you can clone Gweled from Bazaar version control:</p>
           <pre>
 <code>bzr branch lp:gweled</code></pre>
-      </div>  
+      </div> 
+    </div>
   </div>
   <div id="footer">
     <p>© 2011 <a href="https://www.dnax.it/">Daniele Napolitano</a>, <a href="http://www.idi.jouwweb.nl/">Ivo Reumkens</a> and the community.</p>
